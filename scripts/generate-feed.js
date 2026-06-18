@@ -1017,21 +1017,33 @@ async function main() {
   const xBearerToken = process.env.X_BEARER_TOKEN;
   const pod2txtKey = process.env.POD2TXT_API_KEY;
 
-  if (runPodcasts && !pod2txtKey) {
-    console.error("POD2TXT_API_KEY not set");
-    process.exit(1);
-  }
+  // Graceful degradation: if a required key is missing, skip that source
+  // instead of failing the whole run. This lets a fork run without any
+  // secrets (e.g. blogs-only) and still produce a valid feed. The X and
+  // podcast feeds simply won't be refreshed on this fork — the digest step
+  // can fall back to the upstream feed for those sources.
+  let skipped = [];
   if (runTweets && !xBearerToken) {
-    console.error("X_BEARER_TOKEN not set");
-    process.exit(1);
+    console.error("X_BEARER_TOKEN not set — skipping X feed");
+    skipped.push("X/Twitter");
   }
+  if (runPodcasts && !pod2txtKey) {
+    console.error("POD2TXT_API_KEY not set — skipping podcast feed");
+    skipped.push("podcast");
+  }
+  if (skipped.length > 0) {
+    console.error(`  Note: ${skipped.join(" + ")} feed(s) will not be updated in this fork.`);
+  }
+  const doTweets = runTweets && !!xBearerToken;
+  const doPodcasts = runPodcasts && !!pod2txtKey;
+  // Blogs need no key — always runs if requested and sources exist.
 
   const sources = await loadSources();
   const state = await loadState();
   const errors = [];
 
   // Fetch tweets
-  if (runTweets) {
+  if (doTweets) {
     console.error("Fetching X/Twitter content...");
     const xContent = await fetchXContent(
       sources.x_accounts,
@@ -1062,7 +1074,7 @@ async function main() {
   }
 
   // Fetch podcasts
-  if (runPodcasts) {
+  if (doPodcasts) {
     console.error("Fetching podcast content (RSS + pod2txt)...");
     const podcasts = await fetchPodcastContent(
       sources.podcasts,

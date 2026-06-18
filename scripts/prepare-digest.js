@@ -26,9 +26,22 @@ import { homedir } from 'os';
 const USER_DIR = join(homedir(), '.follow-builders');
 const CONFIG_PATH = join(USER_DIR, 'config.json');
 
-const FEED_X_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json';
-const FEED_PODCASTS_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-podcasts.json';
-const FEED_BLOGS_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-blogs.json';
+// Hybrid feed strategy:
+// - Your fork generates feeds it can (e.g. blogs) via its own GitHub Actions.
+// - For sources your fork doesn't run (e.g. X without a token), fall back to
+//   the upstream repo so the digest still has content.
+// Set FB_FORK_REPO=yourname/follow-builders to point at your own fork.
+// Per-feed fallback: try fork first, then upstream.
+const UPSTREAM_REPO = 'zarazhangrui/follow-builders';
+const FORK_REPO = process.env.FB_FORK_REPO || UPSTREAM_REPO;
+const RAW_BASE = (repo) => `https://raw.githubusercontent.com/${repo}/main`;
+
+const FEED_X_URL_PRIMARY = `${RAW_BASE(FORK_REPO)}/feed-x.json`;
+const FEED_X_URL_FALLBACK = `${RAW_BASE(UPSTREAM_REPO)}/feed-x.json`;
+const FEED_PODCASTS_URL_PRIMARY = `${RAW_BASE(FORK_REPO)}/feed-podcasts.json`;
+const FEED_PODCASTS_URL_FALLBACK = `${RAW_BASE(UPSTREAM_REPO)}/feed-podcasts.json`;
+const FEED_BLOGS_URL_PRIMARY = `${RAW_BASE(FORK_REPO)}/feed-blogs.json`;
+const FEED_BLOGS_URL_FALLBACK = `${RAW_BASE(UPSTREAM_REPO)}/feed-blogs.json`;
 
 const PROMPTS_BASE = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/prompts';
 const PROMPT_FILES = [
@@ -45,6 +58,16 @@ async function fetchJSON(url) {
   const res = await fetch(url);
   if (!res.ok) return null;
   return res.json();
+}
+
+// Try the fork's feed first; if missing/empty, fall back to upstream.
+async function fetchJSONWithFallback(primary, fallback) {
+  let data = await fetchJSON(primary);
+  if (data && !data.errors?.length) {
+    return { data, source: 'fork' };
+  }
+  data = await fetchJSON(fallback);
+  return { data, source: data ? 'upstream' : null };
 }
 
 async function fetchText(url) {
@@ -72,12 +95,20 @@ async function main() {
     }
   }
 
-  // 2. Fetch all three feeds
-  const [feedX, feedPodcasts, feedBlogs] = await Promise.all([
-    fetchJSON(FEED_X_URL),
-    fetchJSON(FEED_PODCASTS_URL),
-    fetchJSON(FEED_BLOGS_URL)
+  // 2. Fetch all three feeds (each prefers your fork, falls back to upstream)
+  const [feedXResult, feedPodcastsResult, feedBlogsResult] = await Promise.all([
+    fetchJSONWithFallback(FEED_X_URL_PRIMARY, FEED_X_URL_FALLBACK),
+    fetchJSONWithFallback(FEED_PODCASTS_URL_PRIMARY, FEED_PODCASTS_URL_FALLBACK),
+    fetchJSONWithFallback(FEED_BLOGS_URL_PRIMARY, FEED_BLOGS_URL_FALLBACK)
   ]);
+  const feedX = feedXResult.data;
+  const feedPodcasts = feedPodcastsResult.data;
+  const feedBlogs = feedBlogsResult.data;
+  const feedSources = {
+    x: feedXResult.source,
+    podcasts: feedPodcastsResult.source,
+    blogs: feedBlogsResult.source
+  };
 
   if (!feedX) errors.push('Could not fetch tweet feed');
   if (!feedPodcasts) errors.push('Could not fetch podcast feed');
@@ -158,7 +189,9 @@ async function main() {
       xBuilders: feedX?.x?.length || 0,
       totalTweets: (feedX?.x || []).reduce((sum, a) => sum + a.tweets.length, 0),
       blogPosts: feedBlogs?.blogs?.length || 0,
-      feedGeneratedAt: feedX?.generatedAt || feedPodcasts?.generatedAt || feedBlogs?.generatedAt || null
+      feedGeneratedAt: feedX?.generatedAt || feedPodcasts?.generatedAt || feedBlogs?.generatedAt || null,
+      // Provenance: which repo each feed came from ('fork' = your repo, 'upstream' = author's)
+      feedSources
     },
 
     // Prompts — the LLM reads these and follows the instructions
