@@ -222,5 +222,12 @@
     "substack:post:202058620": 1781769744191,
     "a7d1fb70-81db-44be-92b8-e46db37a1532": 1781769777223
   },
-  "seenArticles": {}
+  "seenArticles": {
+    "https://www.anthropic.com/engineering/how-we-contain-claude": 1781786885639,
+    "https://www.anthropic.com/engineering/april-23-postmortem": 1781786889685,
+    "https://www.anthropic.com/engineering/managed-agents": 1781786893566,
+    "https://claude.com/blog/claude-for-foundation-models": 1781786894253,
+    "https://claude.com/blog/claude-managed-agents-updates": 1781786894819,
+    "https://claude.com/blog/new-in-claude-managed-agents": 1781786895386
+  }
 }
