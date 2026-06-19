@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.0",
-    "proper-lockfile": "^4.1.0"
+    "proper-lockfile": "^4.1.0",
+    "youtubei.js": "^10.0.0"
   }
 }
