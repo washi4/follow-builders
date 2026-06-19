@@ -70,4 +70,4 @@ Use a short divider between items, for example:
 - If you have nothing real for a builder, skip them entirely
 
 ### General
-- At the very end, add a line: "Generated through the Follow Builders skill: https://github.com/zarazhangrui/follow-builders"
+- At the very end, add a line: "Generated through the Follow Builders skill: https://github.com/washi4/follow-builders"
