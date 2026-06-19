@@ -43,7 +43,9 @@ const FEED_PODCASTS_URL_FALLBACK = `${RAW_BASE(UPSTREAM_REPO)}/feed-podcasts.jso
 const FEED_BLOGS_URL_PRIMARY = `${RAW_BASE(FORK_REPO)}/feed-blogs.json`;
 const FEED_BLOGS_URL_FALLBACK = `${RAW_BASE(UPSTREAM_REPO)}/feed-blogs.json`;
 
-const PROMPTS_BASE = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/prompts';
+const PROMPTS_BASE =
+  process.env.FB_PROMPTS_BASE ||
+  'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/prompts';
 const PROMPT_FILES = [
   'summarize-podcast.md',
   'summarize-tweets.md',

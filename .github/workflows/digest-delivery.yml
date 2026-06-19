@@ -13,6 +13,7 @@ jobs:
     env:
       DASHSCOPE_REGION: cn
       FB_MODEL: qwen3.7-max
+      FB_PROMPTS_BASE: "https://raw.githubusercontent.com/${{ github.repository }}/main/prompts"
       FB_LANGUAGE: zh
       FB_TIMEZONE: Asia/Shanghai
       FB_FREQUENCY: daily
