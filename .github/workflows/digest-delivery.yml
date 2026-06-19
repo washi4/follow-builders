@@ -1,0 +1,65 @@
+name: Deliver Digest
+
+on:
+  schedule:
+    # Daily at 08:00 in UTC+8
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+
+    env:
+      DASHSCOPE_REGION: cn
+      FB_MODEL: qwen3.7-max
+      FB_LANGUAGE: zh
+      FB_TIMEZONE: Asia/Shanghai
+      FB_FREQUENCY: daily
+      FB_DELIVERY_TIME: '08:00'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: cd scripts && npm install
+
+      - name: Install Bailian CLI
+        run: npm install -g bailian-cli
+
+      - name: Configure delivery
+        run: |
+          mkdir -p "$HOME/.follow-builders"
+          cat > "$HOME/.follow-builders/config.json" <<EOF
+          {
+            "platform": "other",
+            "language": "${FB_LANGUAGE}",
+            "timezone": "${FB_TIMEZONE}",
+            "frequency": "${FB_FREQUENCY}",
+            "deliveryTime": "${FB_DELIVERY_TIME}",
+            "delivery": {
+              "method": "telegram",
+              "chatId": "${TELEGRAM_CHAT_ID}"
+            },
+            "onboardingComplete": true
+          }
+          EOF
+        env:
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Prepare digest payload
+        run: cd scripts && node prepare-digest.js > /tmp/fb-prepared.json
+
+      - name: Remix digest with Bailian
+        run: node scripts/remix-digest.js < /tmp/fb-prepared.json > /tmp/fb-digest.txt
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+
+      - name: Deliver digest to Telegram
+        run: cd scripts && node deliver.js --file /tmp/fb-digest.txt
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
