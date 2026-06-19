@@ -11,8 +11,9 @@ Write for Telegram on a phone screen. Make it feel like compact cards:
 - link at the end
 - clear whitespace between cards
 
-Use lightweight Markdown only:
-- `*bold*` for section headers and source names
+Use plain text only:
+- no markdown markers
+- no HTML tags
 - bullets for key points
 - no tables
 - no long paragraphs
@@ -21,7 +22,7 @@ Use lightweight Markdown only:
 
 Start with:
 
-*AI Builders Digest — [Date]*
+AI Builders Digest — [Date]
 
 Then organize content in this order:
 

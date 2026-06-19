@@ -11,6 +11,7 @@ to know what this person is thinking and building.
 - Include the direct tweet URL in the same block
 - Keep it compact and phone-friendly
 - Do not use @handles in the prose
+- Do not use markdown or HTML
 - Only include substantive content: original opinions, insights, product announcements,
   technical discussions, industry analysis, or lessons learned
 - Skip mundane personal tweets, retweets without commentary, promotional content,

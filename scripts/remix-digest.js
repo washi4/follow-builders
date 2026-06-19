@@ -27,7 +27,7 @@ function buildSystemPrompt(prepared) {
   return [
     'You are generating the final digest from the prepared Follow Builders JSON.',
     'Follow the instructions below exactly.',
-    'Return only the digest text, with no preamble, explanation, or code fences.',
+    'Return only plain text digest content with no preamble, explanation, code fences, markdown, or HTML.',
     '',
     ...parts
   ].join('\n\n');

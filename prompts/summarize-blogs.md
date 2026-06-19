@@ -13,5 +13,6 @@ professional who wants the key announcements and insights without reading the fu
 - Include one short direct quote if it is genuinely useful
 - End with the original article link
 - Keep the tone sharp and informative
+- Do not use markdown or HTML
 - Avoid filler like "In this blog post..." or "The author discusses..."
 - Jump straight into the substance

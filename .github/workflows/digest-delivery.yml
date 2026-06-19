@@ -2,8 +2,8 @@ name: Deliver Digest
 
 on:
   schedule:
-    # Daily at 08:00 in UTC+8
-    - cron: '0 0 * * *'
+    # Daily at 15:00 in UTC+8 (after feed generation finishes)
+    - cron: '0 7 * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       FB_LANGUAGE: zh
       FB_TIMEZONE: Asia/Shanghai
       FB_FREQUENCY: daily
-      FB_DELIVERY_TIME: '08:00'
+      FB_DELIVERY_TIME: '15:00'
 
     steps:
       - uses: actions/checkout@v4
