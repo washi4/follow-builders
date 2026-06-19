@@ -12,6 +12,7 @@ This repository is an AI Builders Digest skill. The core flow is:
 - `cd scripts && node generate-feed.js --blogs-only`
 - `cd scripts && node prepare-digest.js`
 - `cd scripts && node remix-digest.js`
+- `cd scripts && node build-pages.js`
 - `cd scripts && node deliver.js --file /tmp/fb-digest.txt`
 
 ## Architecture
@@ -21,8 +22,9 @@ This repository is an AI Builders Digest skill. The core flow is:
 - `.github/workflows/generate-feed.yml` runs the feed job on Node 20 once daily at 06:17 UTC and also supports manual `all` / `tweets-only` / `podcasts-only` / `blogs-only` runs.
 - `scripts/prepare-digest.js` reads `~/.follow-builders/config.json`, loads prompts with precedence `user override > GitHub > local`, and outputs one JSON blob for the LLM to remix.
 - `scripts/remix-digest.js` turns the prepared JSON into a final digest using Bailian CLI (`bl text chat`).
+- `scripts/build-pages.js` turns the same digest into a static GitHub Pages archive under `docs/`.
 - `scripts/deliver.js` reads `~/.follow-builders/.env` and routes delivery by `config.delivery.method`.
-- `.github/workflows/digest-delivery.yml` prepares config, remixes the digest with Bailian, and sends it to Telegram on a daily schedule.
+- `.github/workflows/digest-delivery.yml` prepares config, remixes the digest with Bailian, sends it to Telegram, and publishes the archive to GitHub Pages on a daily schedule.
 - Prompt behavior lives in `prompts/*.md`; user-specific overrides belong in `~/.follow-builders/prompts/`.
 
 ## Conventions
