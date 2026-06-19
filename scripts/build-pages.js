@@ -217,8 +217,9 @@ async function main() {
     .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
     .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
     .archive-list { display: grid; gap: 12px; margin-top: 20px; }
-    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
-    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item { display: block; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); text-decoration: none; color: #111827; transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease; }
+    .archive-item:hover, .archive-item:focus-visible { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(17,24,39,.08); border-color: #cbd5e1; }
+    .archive-item .title { font-weight: 600; }
     .archive-item .meta { margin-top: 4px; font-size: 13px; color: #6b7280; }
     .nav { margin-bottom: 16px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
@@ -237,10 +238,10 @@ async function main() {
       ${entries
         .map(
           (entry) => `
-        <div class="archive-item">
-          <a href="${escapeHtml(entry.href)}">${escapeHtml(entry.date)}</a>
+        <a class="archive-item" href="${escapeHtml(entry.href)}">
+          <div class="title">${escapeHtml(entry.date)}</div>
           <div class="meta">Daily digest</div>
-        </div>`
+        </a>`
         )
         .join('\n')}
     </div>
