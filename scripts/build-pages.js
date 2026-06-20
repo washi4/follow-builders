@@ -40,6 +40,10 @@ function formatDateTimeParts(date, timeZone) {
   return `${map.year}-${map.month}-${map.day} ${map.hour}:${map.minute}`;
 }
 
+function formatCacheToken(date) {
+  return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, '');
+}
+
 function addCacheBust(href, token) {
   return `${href}${href.includes('?') ? '&' : '?'}v=${encodeURIComponent(token)}`;
 }
@@ -191,6 +195,7 @@ async function main() {
   const digestText = await readFile(digestPath, 'utf-8');
   const timeZone = prepared.config?.timezone || process.env.FB_TIMEZONE || 'UTC';
   const generatedAt = new Date(prepared.generatedAt || Date.now());
+  const cacheToken = formatCacheToken(generatedAt);
   const dateSlug = formatDateParts(generatedAt, timeZone);
   const displayGeneratedAt = formatDateTimeParts(generatedAt, timeZone);
   const parsed = parseDigest(digestText);
@@ -205,8 +210,8 @@ async function main() {
     digestText,
     generatedAt: displayGeneratedAt,
     timeZone,
-    archiveHref: '../index.html',
-    backHref: '../index.html'
+    archiveHref: addCacheBust('../index.html', cacheToken),
+    backHref: addCacheBust('../index.html', cacheToken)
   });
   await writeFile(join(archiveDir, `${dateSlug}.html`), pageHtml);
 
@@ -216,7 +221,7 @@ async function main() {
     .sort((a, b) => b.localeCompare(a))
     .map((date) => ({
       date,
-      href: addCacheBust(`digests/${date}.html`, date)
+      href: addCacheBust(`digests/${date}.html`, cacheToken)
     }));
 
   const latest = entries[0];
