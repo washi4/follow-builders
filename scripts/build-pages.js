@@ -40,6 +40,10 @@ function formatDateTimeParts(date, timeZone) {
   return `${map.year}-${map.month}-${map.day} ${map.hour}:${map.minute}`;
 }
 
+function addCacheBust(href, token) {
+  return `${href}${href.includes('?') ? '&' : '?'}v=${encodeURIComponent(token)}`;
+}
+
 function escapeHtml(text) {
   return text
     .replace(/&/g, '&amp;')
@@ -212,7 +216,7 @@ async function main() {
     .sort((a, b) => b.localeCompare(a))
     .map((date) => ({
       date,
-      href: `digests/${date}.html`
+      href: addCacheBust(`digests/${date}.html`, date)
     }));
 
   const latest = entries[0];
