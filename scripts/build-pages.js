@@ -110,7 +110,7 @@ function renderCard(cardText) {
     </article>`;
 }
 
-function renderPage({ title, sections, generatedAt, timeZone, archiveHref, backHref }) {
+function renderPage({ title, sections, digestText, generatedAt, timeZone, archiveHref, backHref }) {
   const sectionHtml = sections
     .map(
       (section) => `
@@ -120,6 +120,16 @@ function renderPage({ title, sections, generatedAt, timeZone, archiveHref, backH
       </section>`
     )
     .join('\n');
+  const fallbackHtml = sectionHtml
+    ? ''
+    : `
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">${escapeHtml(digestText).trim()}</pre>
+        </div>
+      </section>`;
 
   return `<!doctype html>
 <html lang="en">
@@ -143,6 +153,7 @@ function renderPage({ title, sections, generatedAt, timeZone, archiveHref, backH
     .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
     .card a { color: #2563eb; word-break: break-word; }
     .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
     .archive-list { display: grid; gap: 12px; margin-top: 20px; }
     .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
     .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
@@ -160,6 +171,7 @@ function renderPage({ title, sections, generatedAt, timeZone, archiveHref, backH
       <p>Generated ${escapeHtml(generatedAt)} (${escapeHtml(timeZone)})</p>
     </div>
     ${sectionHtml}
+    ${fallbackHtml}
   </div>
 </body>
 </html>`;
@@ -186,6 +198,7 @@ async function main() {
   const pageHtml = renderPage({
     title: parsed.title,
     sections: parsed.sections,
+    digestText,
     generatedAt: displayGeneratedAt,
     timeZone,
     archiveHref: '../index.html',
