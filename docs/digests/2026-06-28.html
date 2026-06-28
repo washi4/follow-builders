@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - 2026-06-28</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260628T100558">← Back to archive</a>
+      <a href="../index.html?v=20260628T100558">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - 2026-06-28</h1>
+      <p>Generated 2026-06-28 18:05 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - 2026-06-28
+
+1. X / TWITTER
+
+Swyx, Latent Space Pod 主理人 / AI Engineer
+开源模型在推理成本上具有显著优势，评估标准应向实际花费看齐。
+• 针对保持恒定 inference budget 的观点，指出 open models 的 dollar per token 性价比远高于 closed model APIs
+• 建议发布开源模型时，用主流推理服务商的实际美元花费来衡量 thinking levels，而不是单纯看 token 数量
+https://x.com/swyx/status/2070949306060931312
+
+━━━━━━━━━━
+
+Thibault Sottiaux, OpenAI Codex &amp; ChatGPT 工程师
+Codex 迎来大量体验与功能升级，大幅提升长对话与日常使用的流畅度。
+• 新增 hoverable navigation rail，方便在超长 thread 中预览和跳转
+• 修复了缩放导致的 UI 错位，优化了设置搜索，并新增了专门的 Pets panel
+• 复制到 Slack 时现已完美保留 Markdown 格式，大段文本粘贴不再卡顿
+https://x.com/thsottiaux/status/2071071289247244481
+
+━━━━━━━━━━
+
+Peter Yang, AI 教程作者 / 创作者
+利用 AI 和 MCP 打造个人健康数据自动化追踪系统。
+• 通过 Hermes 每周六自动发送健康检查邮件，整合 Withings API、Fitbit 和 Google Health 数据
+• 自己 vibe coded 一个 MCP server 和移动端 fitness app 来记录训练数据
+• 展示了 AI 在个人生活量化和自动化工作流中的实际应用
+https://x.com/petergyang/status/2070906940352520477
+
+━━━━━━━━━━
+
+Guillermo Rauch, Vercel CEO
+前沿模型的网络安全能力具有双刃剑效应，企业需主动防御。
+• 指出 Mythos 和 Sol 等模型在攻防两端都具备强大能力，若被恶意利用将对忽视漏洞的企业构成严重威胁
+• 强烈建议使用 deepsec 等测试工具配合现有 frontier models 进行安全评估
+https://x.com/rauchg/status/2071047674187714830
+
+━━━━━━━━━━
+
+Aaron Levie, Box CEO
+AI 应用公司的核心壁垒在于构建懂业务的中间层，从而优化 token 成本并提升 ROI。
+• 强调单纯的成本优化不够，需要在具体工作与底层 intelligence 之间建立深度理解 workflow 的 layer
+• 通过针对垂直场景 eval 模型、定制 UX 和提供落地支持，企业能用更优的架构实现每美元获得更多智能
+• 认为这种 horizontal 和 vertical 的 applied AI 模式是当下的巨大机会
+https://x.com/levie/status/2070937863806751154
+
+━━━━━━━━━━
+
+Zara Zhang, 独立 Builder
+借助 AI 编程，非工程师也能在 GitHub 上获得巨大影响力。
+• 分享了自己从去年不懂 GitHub 到现在积累 10k followers 的经历
+• 坦言自己依然不会手写代码，主要靠 AI 辅助构建解决痛点的 side projects
+https://x.com/zarazhangrui/status/2070982013822333007
+
+━━━━━━━━━━
+
+2. OFFICIAL BLOGS
+
+Claude Blog
+Claude Code now supports artifacts
+Claude Code 现在支持将工作进度转化为实时、可分享的视觉页面。这些 artifacts 可以自动更新，涵盖 PR walkthrough、系统解释、dashboard 和 release checklist 等场景。Artifacts 基于 session 的完整 context 构建，无需额外配置数据源或搭建基础设施。当 Claude Code 更新 artifact 时，页面会原地刷新，团队成员能实时看到最新进展，大幅减少沟通成本。所有 artifact 默认私有，仅组织内认证成员可见，管理员可通过合规 API 进行全局管理。目前该功能已在 Claude Team 和 Enterprise 组织中开放 beta 测试。
+https://claude.com/blog/artifacts-in-claude-code
+
+━━━━━━━━━━
+
+3. PODCASTS
+
+Training Data: Memory and Continual Learning: Engram&#39;s Dan Biderman and Jessy Lin
+Engram 正在重新定义 AI 的记忆机制，让模型真正记住你的业务上下文。
+• 现在的瓶颈不是 raw intelligence，而是让模型像老员工一样隐式理解公司特有的 context，而不是每次都靠 RAG 重新读取
+• 通过 adapter fine-tuning 等技术将知识 bake 进 weights，能让 token 消耗降低高达 100 倍，同时提升复杂任务的推理质量
+• 未来的愿景是每个人都拥有专属的个性化模型，成为连接个人数据与数字世界的 neural interface
+&quot;If you are always doing RAG, you can&#39;t make associations... these kinds of associations can only happen in weights.&quot;
+https://www.youtube.com/watch?v=aiR7F4jqjXY
+
+━━━━━━━━━━
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
