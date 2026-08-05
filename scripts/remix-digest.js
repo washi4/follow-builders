@@ -89,7 +89,6 @@ async function main() {
         messagesPath,
         '--output',
         'text',
-        '--non-interactive',
         '--quiet'
       ],
       {
