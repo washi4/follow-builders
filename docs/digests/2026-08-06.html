@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - 2026-08-06</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260806T094225">← Back to archive</a>
+      <a href="../index.html?v=20260806T094225">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - 2026-08-06</h1>
+      <p>Generated 2026-08-06 17:42 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - 2026-08-06
+
+1. X / TWITTER
+
+Swyx (smol_ai / Latent Space)
+探讨了近期 multiagent AGI 的雏形模式，通过设置线程回调来构建隐式的看板或瀑布流依赖图，让每个 agent 保留独立工作。此外，他调侃数学家 Paul Erdős 当年用奖金贿赂同行解题，就像我们现在给早期 LLM 写 prompt 一样。
+• 提出 multiagent 协作的隐式任务依赖图模式
+• 将早期 LLM prompt 工程与数学家的悬赏解题做类比
+https://x.com/swyx/status/2085253030417461661
+
+━━━━━━━━━━
+
+Thibault Sottiaux (OpenAI)
+分享了 Codex 的最新使用技巧，推荐开发者尝试 Codex 中的 /goal 指令。他认为这是一个非常强大的循环，特别是在结合 GPT-5.6 Sol 模型时，能大幅提升开发体验。同时透露自己平均每6分钟就会收到重置 Codex 的请求。
+• 推荐在 Codex 中使用 /goal 指令配合 GPT-5.6 Sol
+• 透露 Codex 需求火爆，频繁收到用户的重置请求
+https://x.com/thsottiaux/status/2085174625655198156
+
+━━━━━━━━━━
+
+Peter Yang (AI 教程作者)
+开源了一个名为 /human-review 的新 skill，允许用户直接在可视化编辑器中修改 HTML 和 Markdown 文件。你可以像在使用 Google Docs 一样调整格式、缩放图片并给 AI 留评论，最后点击发送给 agent 自动应用更新，解决 AI 生成内容最后 10% 的微调痛点。
+• 推出 /human-review skill，提供可视化文档编辑体验
+• 解决 AI 代码或文档生成后最后 10% 的人工打磨需求
+https://x.com/petergyang/status/2085055745410945126
+
+━━━━━━━━━━
+
+Nan Yu (Linear 产品负责人)
+提出了一个直击本质的问题：为什么 ChatGPT 不算是一个 agent？这引发了对当前 agent 定义边界的思考，暗示当大模型具备足够的推理和执行能力时，传统的 chat 界面本身就已经在履行 agent 的职责。
+• 质疑 ChatGPT 为何不被定义为 agent
+• 引发对 agent 核心定义与边界的行业思考
+https://x.com/thenanyu/status/2085126362944229400
+
+━━━━━━━━━━
+
+Madhu Guru (Meta AI 高级总监)
+指出 AI 普及缓慢的原因在于行业仍在强迫用户理解极客实验室术语。用户面对空白窗口不知所措，还要挑选模型、理解 context window 和 MCP 等概念。他预测未来 12 个月内会出现真正懂用户、直接解决问题的破局产品。
+• 批评当前 AI 产品充满极客术语，忽视了普通用户的需求
+• 预测 12 个月内将出现真正以任务为导向的破局 AI 产品
+https://x.com/realmadhuguru/status/2085036386781221257
+
+━━━━━━━━━━
+
+Guillermo Rauch (Vercel CEO)
+宣布 Vercel 现在支持无限的 agent 算力，提供高达 10,000 个并发和每分钟 5,000 个 CPU 核心，并且这些配额还可以继续提升。这为构建大规模、高并发的 AI agent 应用提供了强大的基础设施支持。
+• Vercel 推出无限 agent 算力，支持万级并发
+• 每分钟 5,000 CPU 核心，配额可进一步提升
+https://x.com/rauchg/status/2085077900190208080
+
+━━━━━━━━━━
+
+Aaron Levie (Box CEO)
+强调全球 99% 的 token 消耗将发生在企业场景中，用于写代码、生命科学研究、自动化制造和反欺诈等高经济价值任务。他指出 agent 在经济体中的全面普及需要数年时间，因为必须彻底重构现有工作流，呼吁大家调整对 AI 落地速度的预期。
+• 预测 99% 的 token 消耗将集中在高价值的企业级场景
+• 提醒 AI agent 全面普及需要数年，工作流重构无法一蹴而就
+https://x.com/levie/status/2085200776159490111
+
+━━━━━━━━━━
+
+Garry Tan (Y Combinator CEO)
+认为当 AI 变得足够好时，检测 AI 生成内容将变得毫无意义。就像没人抱怨机器冲压的餐具一样，最终重要的是想法的质量，而不是它是否由人类亲手打造。
+• 认为 AI 内容检测最终会失去意义
+• 强调想法的质量远比生成方式重要
+https://x.com/garrytan/status/2085038756906901656
+
+━━━━━━━━━━
+
+Nikunj Kothari (FPV Ventures 合伙人)
+预测了未来 6 到 9 个月内 AI 圈将频繁使用的技术黑话，包括 out of distribution、control plane、unverifiable fields、rails、intelligence per watt 等。这些词汇反映了行业正从单纯的模型能力转向对系统控制、能耗效率和边界处理的关注。
+• 预测 control plane 和 intelligence per watt 等词汇将流行
+• 反映出行业关注点向系统控制与能耗效率转移
+https://x.com/nikunj/status/2085209022115029132
+
+━━━━━━━━━━
+
+Peter Steinberger (OpenClaw / OpenAI)
+分享了一个硬核的 agent 自动化测试方案：给 Codex 配备了一个支持视频的远程 KVM，让它能够端到端自动化测试 OpenClaw 的 iMessage 集成。因为 iMessage 在虚拟机中不稳定且某些功能需要关闭 SIP，这种物理级外挂方案非常巧妙。
+• 为 Codex 配备远程 KVM 实现 iMessage 的端到端自动化测试
+• 采用物理级方案解决虚拟机中 iMessage 的不稳定性
+https://x.com/steipete/status/2084988316324397312
+
+━━━━━━━━━━
+
+Dan Shipper (Every CEO)
+分析了 Google 当前的战略困境。他认为 Google 必须在前沿编程能力上迎头赶上，但 Demis Hassabis 依然坚信世界模型等基础研究方向对长期目标更重要，即使这在当下的竞争中显得不那么紧迫。
+• 指出 Google 需要在前沿代码能力上追赶竞争对手
+• 透露 Demis 仍坚持世界模型等长期基础研究路线
+https://x.com/danshipper/status/2085048990899315142
+
+3. PODCASTS
+
+AI &amp; I by Every
+Why the Next Hit AI Product Will Be Social Why the Next Hit AI Product Will Be Social (Best of the Pod)
+
+Benchmark 合伙人 Sarah Tavel 探讨了 AI 消费级产品的演进规律。她指出，技术范式转移初期往往由极客主导，但随着基础设施成熟，产品天才将接管市场。下一个 AI 爆款不会是单机的 ChatGPT，而是具备网络效应和多人协作属性的社交产品。
+
+• 消费级 AI 的下一个爆发点在于 UGC 社区和多人网络效应，而非单人工具
+• 真正的护城河是信任与社区状态，目前的 Custom GPTs 缺乏社交基因和信任机制
+• 稳定币正在消除全球金融摩擦，而利用 AI 分析个人决策日志将重塑 VC 的投资判断
+
+“大多数人根本不在乎什么是 context window 或是 agent，他们只需要把事情做完。谁能提供这样的体验，谁就能赢。”
+
+https://www.youtube.com/watch?v=dlI-5W7d7uU
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
