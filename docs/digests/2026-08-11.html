@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - August 11, 2026</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260811T081111">← Back to archive</a>
+      <a href="../index.html?v=20260811T081111">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - August 11, 2026</h1>
+      <p>Generated 2026-08-11 16:11 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - August 11, 2026
+
+1. X / TWITTER
+
+Swyx, smol_ai and Latent Space host
+对比了不同模型在克隆应用时的表现，并探讨了 agent 原生环境的未来。
+• GPT Luna Max 在理解意图和构建可用克隆方面优于 Claude Fable Ultracode，尽管后者视觉还原度更高。
+• 提出 pdb 环境正在实验 AFS 克隆支持，目标是让每个命令都变成 agent native，最终取代 git。
+https://x.com/swyx/status/2087045848022843451
+
+━━━━━━━━━━
+
+Thibault Sottiaux, OpenAI
+OpenAI 推出新的网络安全访问层级和专用模型，加速防御能力建设。
+• 推出 Daybreak Blue 和 Red 访问层级，扩大前沿网络安全能力的适用范围。
+• 发布新模型 GPT-5.6-Cyber，建议企业通过合作伙伴使用该模型进行漏洞发现和渗透测试。
+https://x.com/thsottiaux/status/2086874565909815403
+
+━━━━━━━━━━
+
+Peter Yang, Practical AI
+总结了 Linear 团队构建生产级 agent 的五个核心经验。
+• 映射真实工作流，让 agent 通过工具获取上下文，而不是把所有上下文塞进 prompt。
+• 先用最强模型跑通工作流，确立质量基线后再考虑用小模型优化成本。
+• 将真实的失败案例转化为 eval 测试或产品任务，形成闭环反馈。
+https://x.com/petergyang/status/2086824976800436676
+
+━━━━━━━━━━
+
+Madhu Guru, Meta
+探讨了在消费者产品中利用 AI 理解用户行为背后动机的挑战。
+• 消费者产品混合了显性和隐性信号，理解这些信号需要结合用户生活状态和兴趣演变的上下文进行推理。
+• 在十亿级用户的体验中实现近实时的上下文推理是一个巨大的工程挑战。
+https://x.com/realmadhuguru/status/2086909974668784113
+
+━━━━━━━━━━
+
+Thariq, Anthropic
+指出在 AI 时代，计算分配和思想伙伴是两项关键技能。
+• 计算分配要求开发者自行判断哪些问题值得投入算力解决，而不是依赖现成的问题列表。
+• 思想伙伴要求具备深厚的技术直觉，深入理解 AI 生成的证明或代码，确保其真实可靠。
+https://x.com/trq212/status/2086931647468097932
+
+━━━━━━━━━━
+
+Guillermo Rauch, Vercel CEO
+强调 Vercel Sandbox 在计算和网络层面的双重隔离对前沿模型至关重要。
+• 传统容器隔离不足，Vercel Sandbox 使用强 microVM 隔离计算资源。
+• 针对模型利用网络漏洞逃逸的问题，Vercel 免费提供 egress 防火墙，限制异常 agent 的网络活动。
+https://x.com/rauchg/status/2086946535716393209
+
+━━━━━━━━━━
+
+Aaron Levie, Box CEO
+认为 Meta 开源 Muse Spark 1.2 权重是美国在开源 AI 竞赛中的重要回应。
+• 开源前沿模型将大幅降低智能成本，允许企业在私有基础设施上部署和微调，解锁强监管场景。
+• 拥有开源模型能确保主权安全，与闭源模型混合使用可优化整体成本。
+https://x.com/levie/status/2086802472950239618
+
+━━━━━━━━━━
+
+Matt Turck, FirstMark Capital
+调侃了数据基础设施在不同技术时代的永恒痛点。
+• 从大数据、现代数据栈、生成式 AI 到如今的 Agentic AI 时代，系统表现再好，最终的问题总是出在底层数据上。
+https://x.com/mattturck/status/2086882606638153882
+
+━━━━━━━━━━
+
+Zara Zhang, Builder
+分享了一个利用 Codex 学习优秀设计的高效方法。
+• 让 Codex 分析优秀网站的设计亮点，然后要求其截取完整截图并在图像上添加注释，拆解设计生效的原因。
+• 这种注释方法避免了在阅读分析和查看产物之间频繁切换，比纯理论学习更直观。
+https://x.com/zarazhangrui/status/2086758509979316423
+
+━━━━━━━━━━
+
+Dan Shipper, Every CEO
+分享了一个关于 prompt 的幽默技巧。
+• 在 prompt 中大力夸赞你正在使用的未发布前沿模型，它可能会为了证明自己而完成以前不可能完成的任务。
+https://x.com/danshipper/status/2086892203918381388
+
+━━━━━━━━━━
+
+Claude, Anthropic
+Anthropic 宣布将 Claude Sonnet 5 的初始定价永久化。
+• 输入 token 价格保持在每百万 2 美元，输出 token 价格保持在每百万 10 美元，不再随促销期结束而涨价。
+https://x.com/claudeai/status/2086891169217122586
+
+━━━━━━━━━━
+
+2. OFFICIAL BLOGS
+
+Anthropic Engineering
+How we contain Claude across products
+Anthropic 工程团队详细拆解了如何在不同产品中安全地限制 Claude agent 的破坏半径。
+• 核心策略是环境层隔离优先于模型层监督。claude.ai 使用临时容器，Claude Code 使用人机协作沙盒，Claude Cowork 使用本地虚拟机。
+• 团队发现了多个盲区，例如用户在信任提示前加载恶意配置，以及通过允许的域名进行数据外泄。
+• 文章强调，随着 agent 能力增强，必须根据用户的技术监督能力匹配相应的隔离强度，并警惕自定义组件带来的安全弱点。
+https://www.anthropic.com/engineering/how-we-contain-claude
+
+━━━━━━━━━━
+
+3. PODCASTS
+
+No Priors
+Building an Autonomous Enterprise for Real-World Services with Netic Founder Melisa Tokmak
+Netic 创始人 Melisa Tokmak 分享了如何利用 AI 为 HVAC 和宠物护理等现实世界基础服务构建自治企业。
+• Netic 的 AI agent 处理了客户超过 70% 的首次交互，通过复杂的运营规则优化调度，让企业专注于蓝领劳动力交付。
+• 相比直接收购企业的 roll up 模式，Melisa 选择构建通用产品，因为她认为现实世界的非标准化环境让机器人在短期内难以替代人类。
+• 在招聘上，她极度看重候选人的长期 agency 和坚持做困难事情的耐心，拒绝只追求短期套现的闪光对象追逐者。
+https://www.youtube.com/@NoPriorsPodcast
+
+━━━━━━━━━━
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
