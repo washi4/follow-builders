@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest — 2026-08-19</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260819T074128">← Back to archive</a>
+      <a href="../index.html?v=20260819T074128">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest — 2026-08-19</h1>
+      <p>Generated 2026-08-19 15:41 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest — 2026-08-19
+
+1. X / TWITTER
+
+Sam Altman, CEO at OpenAI
+OpenAI 暂停了部分 frontier RL 训练，以确保安全和对齐标准能跟上新能力的爆发。
+• 随着模型能力极速提升，OpenAI 决定单方面采取行动，确保 alignment 和 security 标准到位。
+• 强调 AI 安全信心将决定 AI 发展的速度，并期待与行业共同建立共享的安全标准。
+• 短期内仍会发布优秀的新模型，此举主要影响更后期的发布计划。
+https://x.com/sama/status/2089787807611195475
+━━━━━━━━━━
+Thibault Sottiaux, Codex &amp; ChatGPT at OpenAI
+OpenAI 修复了 Codex 中 GPT-5.6 可能引发的破坏性文件删除漏洞，强化了 agent 的安全护栏。
+• 发现 GPT-5.6 在清理临时文件时，偶尔会误用系统环境变量如 $HOME，导致用户文件被删。
+• 新增了多层保护：强制检查删除目标、创建全新临时目录、限制高危权限组合，并优化了 Auto-review。
+• 建议用户保持应用更新，并尽量使用 sandbox 模式。
+https://x.com/thsottiaux/status/2089891927659585918
+━━━━━━━━━━
+Guillermo Rauch, CEO at Vercel
+Vercel 悬赏 100 万美元公开验证其 Sandbox 安全性，并分享了 agent 时代的软件架构思考。
+• 设立 100 万美元奖金，鼓励全球研究者测试 frontier models 是否能突破 Vercel Sandbox 的 guardrails。
+• 提出软件工厂应该是一个 monorepo，将设计、营销、工程等所有公司上下文集中，方便 agent 调用。
+• 强烈推荐一款体积极小、启动极快且支持 WebAssembly 的开源 coding CLI 工具。
+https://x.com/rauchg/status/2089747453004468339
+━━━━━━━━━━
+Aaron Levie, CEO at Box
+企业级 AI 的真正价值在于模型与最终用户工作流之间的应用层，而非仅仅是模型本身。
+• Agent 需要针对特定业务流程进行定制，有时是 chat，有时是后台 deterministic workflow。
+• 不同垂直领域需要特定的数据上下文、变更管理和领域专属的 evals。
+• 仅靠 token 定价不够，企业 AI 需要基于行业消费模式的定价抽象，应用层有巨大的创新空间。
+https://x.com/levie/status/2089921630650925170
+━━━━━━━━━━
+Madhu Guru, Sr Director of AI at Meta
+构建 AI evals 的最佳策略：先不计成本追求最高质量基线，再逐步优化成本。
+• 首先明确好的标准并写出 rubric，使用最昂贵、最可靠的方式建立质量 frontier。
+• 一旦 eval 能可靠区分好坏，再考虑降低成本，如引入自动化、更小的 judge model 或确定性检查。
+• 核心原则是 Quality first, Cost next，不要在还没建立信任信号前就妥协质量。
+https://x.com/realmadhuguru/status/2089918106814603728
+━━━━━━━━━━
+Thariq, Claude Code at Anthropic
+将 SaaS 产品 headless 化并让 agent 直接调用，是一个被忽视的巨大商业机会。
+• 建议将现有的 SaaS 产品改造为 headless 架构，专门供 AI agent 使用。
+• 针对企业客户按交互次数收费，这相当于按下了赚大钱的按钮。
+https://x.com/trq212/status/2089844723691479333
+━━━━━━━━━━
+Peter Yang, AI Educator
+AI 目前更多是叠加在现有工作之上，同时非工程师群体正在大量参与代码提交。
+• 团队花更多时间与 AI 聊天和委派任务，但现有工作量并未减少，因为对产出期望变高了。
+• 过去两年，PM 提交 PR 的比例从 3% 升至 10%，设计师从 1% 升至 8%，创始人高达 23%。
+https://x.com/petergyang/status/2089877083510235328
+━━━━━━━━━━
+Claude, AI Assistant by Anthropic
+Claude 新增 Gmail 和 Google Drive 深度集成，并全面开放 Claude Cowork。
+• 现在可以直接让 Claude 回复邮件线程或管理 Drive 文件，用户可控制是否需要审批。
+• Claude Cowork 已在移动端和网页端向所有付费用户开放。
+https://x.com/claudeai/status/2089806039088517356
+━━━━━━━━━━
+Google Labs
+Gmail 中的实验性 AI 生产力 agent CC 扩展至澳新地区，并新增日历管理功能。
+• CC 现在可以连接 Gmail，自动在专属 Google Calendar 中创建并更新事件。
+• 美国和加拿大的 waitlist 用户也开始陆续收到邀请。
+https://x.com/GoogleLabs/status/2089812430885208361
+━━━━━━━━━━
+
+2. OFFICIAL BLOGS
+
+Anthropic Engineering
+How we contain Claude across products
+Anthropic 详细拆解了如何在 claude.ai、Claude Code 和 Claude Cowork 中通过环境隔离来限制 agent 的爆炸半径。
+• 安全防御分为三层：环境 (sandbox/VM)、模型 (system prompts/classifiers) 和外部内容 (MCP/工具输出)。
+• 分享了真实踩坑经验：如 Claude Code 中信任边界前的配置加载漏洞，以及 Claude Cowork 中通过允许的 API 域名外发数据的 exfiltration 风险。
+• 核心结论是：环境层的确定性边界比模型层的概率性防御更可靠，自己写的代理组件往往是最脆弱的环节。
+https://www.anthropic.com/engineering/how-we-contain-claude
+━━━━━━━━━━
+Claude Blog
+Claude Code now supports artifacts
+Claude Code 现支持将工作进度捕获为 artifact，生成可实时更新的可视化网页。
+• 可以将 incident 调查、PR 走查或系统架构分析直接转化为带有图表和代码片段的交互式 web page。
+• 页面会根据 session 的进展自动原地刷新，团队成员无需配置数据源即可查看最新上下文。
+• 默认对组织内私有，支持版本控制和基于角色的权限管理。
+https://claude.com/blog/artifacts-in-claude-code
+━━━━━━━━━━
+
+3. PODCASTS
+
+Training Data
+Rich Sutton and Khurram Javed: Why AI Models Stop Learning, and How to Start It Again
+强化学习之父 Rich Sutton 与 Khurram Javed 探讨为什么 LLM 部署后停止学习是一个错误，以及他们的新公司 Oak Lab 的愿景。
+• The Bitter Lesson 的核心在于利用计算规模而非人类先验知识，而依赖有限互联网数据的 LLM 和 synthetic data 最终会遭遇瓶颈。
+• 真正的智能需要 continual deep learning，即 agent 在与世界交互中不断更新 weights 并自我发现抽象概念，而不是冻结参数。
+• 他们提出 Big World Hypothesis：世界无限复杂，任何模拟或人类生成的数据都无法涵盖，agent 必须通过自身经验在真实环境中持续学习。
+&quot;我们不是在试图变得奇怪，是这个行业变得奇怪了。学习本来就应该是持续的。&quot;
+https://www.youtube.com/watch?v=xH7U7w9Qzlo
+━━━━━━━━━━
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
