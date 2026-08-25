@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - 2026-08-25</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260825T074825">← Back to archive</a>
+      <a href="../index.html?v=20260825T074825">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - 2026-08-25</h1>
+      <p>Generated 2026-08-25 15:48 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - 2026-08-25
+
+1. X / TWITTER
+
+Thibault Sottiaux, Codex &amp; ChatGPT at OpenAI
+OpenAI 将针对 Plus 用户重新引入 5 小时使用限制，以优化算力分配并改善轻度用户的体验。
+• ChatGPT Work 和 Codex 将恢复 Plus 账号的 5 小时限制，这有助于平滑算力负载，同时保持每周总使用量的慷慨额度。
+• 很多轻度用户会不小心耗尽一周额度然后感到困惑，限制能避免这种糟糕体验。
+• 100 美元和 200 美元的 Pro 订阅用户在接下来的几个月内不受此限制影响。
+https://x.com/thsottiaux/status/2092058556707344708
+
+━━━━━━━━━━
+
+Madhu Guru, Sr Director of AI at Meta
+构建优秀 eval 的核心在于其区分能力，而不是单纯追求难度。
+• 如果一个 eval 无法区分已知能力差异明显的 AI 系统，就像给博士生做五年级数学题，缺乏区分度。
+• 盲目增加难度会导致所有系统都失败，无法衡量其实际设计目标。
+• 完美的 eval 应该处于真实、困难且对能力差异敏感的甜蜜点。
+https://x.com/realmadhuguru/status/2092058332735693264
+
+━━━━━━━━━━
+
+Amjad Masad, CEO at Replit
+Replit Agent 在日常工作中已经完全取代了 Claude CoWork，成为更高效的 coding agent。
+• Replit Agent 在执行任务时表现出更强的持久性和细致度。
+• 它能更有效地利用代码和软件工具来完成复杂任务，显著提升了日常开发体验。
+https://x.com/amasad/status/2091962601907638352
+
+━━━━━━━━━━
+
+Guillermo Rauch, CEO at Vercel
+终端 reset 命令缓慢的根源可以追溯到 1979 年的 3BSD 系统，用 Zig 重写后速度提升了 1000 倍。
+• 发现终端输出混乱时使用的 reset 命令出奇地慢，原因是 1979 年 3BSD 的 tset 包含了一个 sleep(1) 来等待老式机械终端稳定。
+• 让 fx 用 Zig 写了一个替代方案，将耗时从 1 秒缩短到了 1 毫秒。
+• 深入研究了 ncurses 和 terminfo，感叹现代技术栈的历史渊源以及优秀系统设计的持久生命力。
+https://x.com/rauchg/status/2091957823945216474
+
+━━━━━━━━━━
+
+Aaron Levie, CEO at Box
+在 AI agent 时代，记录系统和零数据保留策略是企业 AI 普及的绝对基石。
+• AI agent 将在平台上执行比人类多 100 倍的工作，因此系统的治理、安全性、访问控制和 API 设计变得前所未有的重要。
+• ZDR 极大简化了企业处理子处理器数据的合规流程，如果没有 ZDR，企业 AI 的扩散将陷入停滞。
+• 大多数企业内部治理要求只能使用 ZDR 模型，因为他们无法在 context window 中显式分离 PII 和机密数据。
+https://x.com/levie/status/2092087679240569126
+https://x.com/levie/status/2091909170308296950
+
+━━━━━━━━━━
+
+Nikunj Kothari, Partner at FPV Ventures
+非传统的 VC 交易在达成前会经历无数次濒临破裂，创始人需要找到真正的内部 champion 来推动交易。
+• 每一笔非传统交易在正式 wiring 前都会死上一百次，通常需要一个合伙人冒着风险去推动。
+• 创始人应该找出谁是真正的 champion，并为他们提供充足的信息来应对基金内部动态。
+• Associate 和 non-voting partner 在这个过程中非常有用，这也是测试他们未来如何与你合作的好机会。
+https://x.com/nikunj/status/2092079149028716877
+
+━━━━━━━━━━
+
+Peter Steinberger, Polyagentmorous ClawFather at OpenClaw and OpenAI
+软件开发的未来在于摆脱那些无法通过 prompt 修改的传统软件。
+• 我们需要远离那些不能通过自然语言 prompt 直接修改和定制的僵化软件。
+• AI 原生软件应该具备高度的可塑性，让 prompt 成为改变软件行为的核心交互方式。
+https://x.com/steipete/status/2091923535513928015
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
