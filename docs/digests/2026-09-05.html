@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest 2026-09-05</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260905T111127">← Back to archive</a>
+      <a href="../index.html?v=20260905T111127">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest 2026-09-05</h1>
+      <p>Generated 2026-09-05 19:11 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest 2026-09-05
+
+1. X / TWITTER
+
+Sam Altman, OpenAI CEO
+GPT 6 Astra 正式向 Pro、Enterprise 和 Business Premium 用户开放，支持 Work/Codex 及 API。
+• Plus 和 Business 用户的推送也已紧随其后全面展开
+• 这是 OpenAI 在模型能力上的又一次重大升级
+https://x.com/sama/status/2095973658867171733
+
+Thibault Sottiaux, OpenAI
+Astra 提前发布并成为团队最大的竞争优势，直接将部分计划提前了 6 个月。
+• 团队原定于明年年中发布的功能将改在 DevDay 推出
+• 为所有 Plus、Pro 和 Business 用户进行了完整的 banked reset
+https://x.com/thsottiaux/status/2096101429832552872
+
+Guillermo Rauch, Vercel CEO
+极度看好 WebMCP，认为 agent 必须依托现有的 WWW 基础设施运行。
+• WebMCP 让 Next.js 开发页面能直接向 agent 暴露调试工具，无需额外配置 MCP server
+• 预测 AI software factories 将产出无 bug 且能自我进化的软件
+https://x.com/rauchg/status/2096065378598441431
+
+Madhu Guru, Meta AI 高级总监
+提升 AI 产品构建能力的最佳方式是亲自自动化一个完整的端到端 workflow。
+• 思考什么是优秀的端到端体验，以及如何合理使用 MCPs 和 tools
+• 明确 human in the loop 的边界并建立评估机制，实践胜于阅读
+https://x.com/realmadhuguru/status/2095907570540335174
+
+Amjad Masad, Replit CEO
+Singularity 已经到来，只是分布尚不均匀，Astra 已成功接入 Replit。
+• 强调 AI 能力的普及正在深刻改变开发者的工作方式
+https://x.com/amasad/status/2095986658185453928
+
+Garry Tan, Y Combinator CEO
+GStack 现已采用 AsideAI 作为首选的 remote session browser。
+• Aside 不仅是一个出色的浏览器，还在 credential 管理和 AI agent harness 方面表现优异
+• 在配置 OpenClaw 与 Slack 集成时，将原本 2 小时的流程缩短至 3 分钟以内
+https://x.com/garrytan/status/2095948689823121872
+
+━━━━━━━━━━
+
+2. OFFICIAL BLOGS
+
+Claude Blog
+Claude in Chrome is generally available
+Claude 浏览器插件现已向所有付费用户全面开放，并支持在浏览器中自主执行操作。
+• 引入安全分类器，在执行前验证每个操作是否安全且符合用户请求
+• 大幅增强了对 prompt injection 的防御能力，Opus 5 和 Sonnet 5 在开启 probes 和分类器后实现了 0 攻击成功率
+• 能够访问内部 dashboard、legacy systems 等没有现成 connector 的工具
+https://claude.com/blog/claude-in-chrome-generally-available
+
+Claude Blog
+Claude gets its own browser in Cowork
+Claude 桌面端应用现已内置独立浏览器，专门用于处理需要访问网页的任务。
+• 内置浏览器与用户个人浏览器完全隔离，不会读取用户的 tabs、bookmarks 或 passwords
+• 适用于将网页任务交给 Claude 处理而用户继续其他工作的场景，如收集数据或填写表单
+• 采用与 Claude in Chrome 相同的 prompt injection 防御机制
+https://claude.com/blog/cowork-built-in-browser
+
+━━━━━━━━━━
+
+3. PODCASTS
+
+No Priors
+Redefining Chip Architecture with Arm CEO Rene Haas
+Arm CEO 探讨了芯片供应链、AI 在芯片设计中的应用以及机器人领域的未来。
+• 芯片设计中耗时最长的是 verification 和 debug，AI 在这方面展现出巨大潜力，未来有望将设计周期大幅缩短
+• Arm 推出首款物理产品 Arm AGI CPU，直接参与供应链，以满足 Meta 等客户对通用 agentic CPU 的需求
+• 机器人行业将由 Arm 驱动，从实时传感 microprocessors 到 humanoid 的大脑，Arm 技术将无处不在
+https://www.youtube.com/@NoPriorsPodcast
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
