@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - 2026-09-11</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260911T120536">← Back to archive</a>
+      <a href="../index.html?v=20260911T120536">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - 2026-09-11</h1>
+      <p>Generated 2026-09-11 20:05 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - 2026-09-11
+
+1. X / TWITTER
+
+Josh Woodward (VP, Google Labs / Gemini)
+Gemini 正式登陆 Windows 平台。
+• 现在可以在 Windows 上直接使用 Gemini 应用。
+• 进一步扩展了 Google AI 助手的跨平台覆盖范围。
+https://x.com/joshwoodward/status/2098131750660772342
+
+━━━━━━━━━━
+
+Boris Cherny (Claude Code, Anthropic)
+随着 model 变得更聪明，缺乏 safeguard 也会让它们变得更危险；同时分享了用 AI 写 production code 的质量把控经验。
+• 最新的 Threat Intelligence 报告指出，强大的 dual use 能力带来了严峻的安全挑战。
+• 对于 Claude 生成的代码：prototype 可以 black box，但 production code 必须有更高的标准，需要引入ers。
+• 建议使用最新的 frontier model 如 Opus 5 或 Fable 5.1，提高 effort 级别，并完善 CLAUDE.md 来指导 model。
+https://x.com/bcherny/status/2098281805770309686
+https://x.com/bcherny/status/2098217573276131577
+
+━━━━━━━━━━
+
+Thibault Sottiaux (Codex &amp; ChatGPT, OpenAI)
+OpenAI 推出按需扩展的 agent API，并因 Astra 需求激增暂停了 $200 Pro 计划的新订阅。
+• 发布了 ChatGPT Work 底层基础设施的 API，开发者可以在 1 分钟内接入 scaled agents。
+• 为了保证现有用户的体验和 Astra 的可用性，暂停 $200 Pro plan 的新订阅以缓解系统压力。
+https://x.com/thsottiaux/status/2098238138334548260
+https://x.com/thsottiaux/status/2098113585683808624
+
+━━━━━━━━━━
+
+Peter Yang (Practical AI tutorials)
+在实际完成任务方面，Sol 比 Astra 更好用。
+• 相比于 Astra，Sol 在 getting shit done 上表现更佳。
+https://x.com/petergyang/status/2098215935467544604
+
+━━━━━━━━━━
+
+Nan Yu (Product staff, OpenAI)
+调侃当前的一些私募股权收购，不要说是估值大幅缩水的 PE 收购，请叫它 Italian goodbye。
+https://x.com/thenanyu/status/2098094411465048497
+
+━━━━━━━━━━
+
+Madhu Guru (Sr Director, AI at Meta)
+构建优秀 eval 的核心秘诀：不仅要衡量最终结果，更要衡量中间步骤。
+• 两个 agent 可能得出相同的答案，但一个调用 4 次 tool，另一个调用 17 次还报错，显然前者更优。
+• 建议清晰定义 workflow 和每一步的 task，为每个步骤设计单独的 eval，并区分 median 和 hard tasks。
+https://x.com/realmadhuguru/status/2098064969464217720
+
+━━━━━━━━━━
+
+Thariq (Claude Code, Anthropic)
+分享了一个实用的 prompt 技巧，让 Claude 深入了解你的个人背景。
+• 让 Claude 通过自由文本或 askuserquestion tool 对你进行深度 interview，挖掘它还不知道的生活细节并保存到 memory 中。
+https://x.com/trq212/status/2098157600361861579
+
+━━━━━━━━━━
+
+Google Labs (Google AI tools)
+Dreambeans 现已向全美用户免费开放，并支持与 Gemini 联动。
+• iOS 和 Android 用户无需订阅即可使用，获取每日个性化的故事推送。
+• 连接 Gemini 后，Dreambeans 能基于你的聊天上下文提供更具洞察力的定制内容。
+https://x.com/GoogleLabs/status/2098110018289803558
+
+━━━━━━━━━━
+
+Amjad Masad (CEO, Replit)
+AI 确实存在网络安全等风险，但所谓的灭绝风险根本不值一提。
+• 认为 AI 会导致 100% 人类死亡的灭绝风险是不切实际的。
+https://x.com/amasad/status/2098171265924116732
+
+━━━━━━━━━━
+
+Guillermo Rauch (CEO, Vercel)
+Vercel 的全球 metadata store 在 p99 延迟上提升了 91%，大幅加速了 build 到 deploy 的流程。
+• Vercel 是世界上负载最重的 multi-tenant 系统之一，每天有约 1000 万次 deployment。
+• 在 agentic deployment 激增的压力下，底层 CDN 同步速度得到了显著优化。
+https://x.com/rauchg/status/2098091056302833837
+
+━━━━━━━━━━
+
+Aaron Levie (CEO, Box)
+总结了与企业高管交流得出的 AI agent 落地趋势，并宣布与 OpenAI 深化合作。
+• 企业最关注网络安全漏洞、多 model 混用、agent 身份与安全，以及为了适应 agent 而重构工作流。
+• 架构调整非常无情，企业不会等 vendor 完善产品，不行就换；同时 legacy systems 依然是最大绊脚石。
+• Box 与 OpenAI 达成深度合作，用户可以直接在 ChatGPT 中安全处理 Box 里的企业内容。
+https://x.com/levie/status/2098218284139311615
+https://x.com/levie/status/2098135659714085281
+
+━━━━━━━━━━
+
+Zara Zhang (Builder)
+吐槽 computer use 到现在还是慢得让人痛苦。
+https://x.com/zarazhangrui/status/2098136119154254287
+
+━━━━━━━━━━
+
+Nikunj Kothari (Partner, FPV Ventures)
+总结早期 VC 圈的三个真相。
+• 每个人都想融 5000 万美金的 seed 轮。
+• 每个人都觉得自己明年能做到 3000 万美金 ARR。
+• 每个热门的 seed 轮最后估值都会神奇地定格在 3 亿美金左右。
+https://x.com/nikunj/status/2098078391065018816
+
+━━━━━━━━━━
+
+Peter Steinberger (OpenClaw / OpenAI)
+在 AI 时代，重复写 logic 已经不再痛苦了，真正痛苦的依然是设计 abstraction。
+https://x.com/steipete/status/2098089196800098798
+
+━━━━━━━━━━
+
+Aditya Agarwal (GP, SPC)
+如果有一台机器能治愈我们最紧迫的疾病，你会把 GDP 的多大比例投入给它？答案是非常高。这就是我们现在所处的 AI 时代。
+https://x.com/adityaag/status/2098112281267843264
+
+━━━━━━━━━━
+
+Claude (Anthropic)
+Fable 5.1 Build Days 本周启动，全球多地将举办线下 buildathon。
+• 活动从 9 月 11 日持续到 25 日，带上你的问题或想法去探索 AI 的无限可能。
+https://x.com/claudeai/status/2098138736642933143
+
+━━━━━━━━━━
+
+3. PODCASTS
+
+The MAD Podcast with Matt Turck
+When AI Improves Itself | Richard Socher (Recursive)
+Richard Socher 探讨了 recursive self improvement 如何重塑科学发现，以及为什么 AI 的幻觉在科研中可能是个优势。
+• 科学进步正在放缓，因为人类知识已经变成了迷宫，AI 将像微积分之于物理学一样，帮助我们把碎片化的生物学和化学等复杂系统重新编织在一起。
+• Next-token prediction 本质上是在构建 world model；在蛋白质折叠和化学分子序列中，AI 通过预测下一个 token 掌握了深层的物理和空间规律。
+• 提出了 Eureka Machine 的四大支柱：LLM 吸收人类知识、科学测量构建现实 model、高保真 simulation，以及 robotic process automation 在真实世界中验证。
+• 只要是可以被 simulate 和 verify 的领域，AI 最终都会解决。
+https://www.youtube.com/@DataDrivenNYC/videos
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
