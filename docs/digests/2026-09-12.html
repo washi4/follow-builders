@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - 2026-09-12</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260912T113158">← Back to archive</a>
+      <a href="../index.html?v=20260912T113158">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - 2026-09-12</h1>
+      <p>Generated 2026-09-12 19:31 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - 2026-09-12
+
+1. X / TWITTER
+
+Thibault Sottiaux, Codex &amp; ChatGPT at OpenAI
+OpenAI本周密集发布了多项Astra更新，并快速修复了社区反馈的质量问题。
+• 本周Astra迎来了Images 2.5和Agents API等重磅更新，同时收购了开源工具Git AI团队，帮助开发者更好追踪coding agents的代码贡献。
+• 针对社区反馈，团队禁用了导致早停的context management实验，并清理了配置不当的引擎，整体响应速度和稳定性显著提升。
+https://x.com/thsottiaux/status/2098612714704891959
+
+━━━━━━━━━━
+
+Peter Yang, AI教程作者
+对目前流行的software factories概念保持谨慎，认为AI还无法完全脱离人类实现端到端开发。
+• 只要AI在夜间自动构建时做出一个错误假设，整个任务就会浪费大量tokens。
+• 除了验证和测试，目前还没有看到真正无人类干预、端到端构建新功能的成功案例。
+https://x.com/petergyang/status/2098565668241334366
+
+━━━━━━━━━━
+
+Madhu Guru, Sr Director of AI at Meta
+总结了企业AI项目失败的三大原因，并给出了务实的转型建议。
+• 失败原因包括用传统软件开发的旧套路做AI、对evals投资不足、以及脱离实际业务场景从外部强推AI工具。
+• 建议企业雇佣有实际AI产品经验的领导者，将evals作为核心指标，并把AI人才直接嵌入到财务和销售等具体业务线中。
+https://x.com/realmadhuguru/status/2098448235048378456
+
+━━━━━━━━━━
+
+Thariq, Claude Code at Anthropic
+Anthropic推出了全新的plugin evals工具，解决模型迭代时的技能兼容性问题。
+• 开发者现在可以通过简单的命令行初始化plugin evals，快速验证自己的skills在新模型发布后是否依然有效。
+• 仅仅看pass/fail分数已经很难解释evals结果，很多失败其实是因为隐藏的测试条件过于严苛。
+https://x.com/trq212/status/2098531560643539440
+
+━━━━━━━━━━
+
+Amjad Masad, CEO at Replit
+Replit不仅收购了一家完全在其平台上构建的业务，还推出了带预算控制的Routines。
+• 这次收购证明了Replit生态的成熟度，预计未来会有更多类似案例。
+• 新推出的Routines功能加入了预算控制，同时社区里基于Astra的3D实验也让人眼前一亮。
+https://x.com/amasad/status/2098548464452055437
+
+━━━━━━━━━━
+
+Guillermo Rauch, CEO at Vercel
+Vercel AI Gateway正在成为AI时代的CDN，Tailscale的model router已将其作为底层基础设施。
+• 直接连接模型origin既脆弱又难以维护，而DIY网关成本高昂，AI Gateway提供了更稳定可靠的路由方案。
+• Vercel很自豪能为Tailscale这样的顶尖网络公司提供AI基础设施支持。
+https://x.com/rauchg/status/2098531157230969062
+
+━━━━━━━━━━
+
+Aaron Levie, CEO at Box
+Box现在可以挂载到agent sandboxes中，让AI agent像人类一样轻松读写文件。
+• 随着AI agent在企业中执行越来越关键的工作流，它们需要和人类一样的基础文件操作能力。
+• 这一更新大幅降低了agent在沙盒环境中处理企业文档的门槛。
+https://x.com/levie/status/2098478938003841123
+
+━━━━━━━━━━
+
+Ryo Lu, Designer at Cursor
+Cursor正式推出了long-lived agents，专为处理大型复杂想法和长期任务设计。
+• long-lived agents进一步提升了Cursor的自动化编程体验，让agent能更好地跟进长周期的开发任务。
+• 他同时分享了个人搬空房子移居台北的生活动态，开启了新的创作阶段。
+https://x.com/ryolu_/status/2098324260867772806
+
+━━━━━━━━━━
+
+Zara Zhang, Builder
+认为one-person company的概念被严重高估，创业依然需要结伴而行。
+• 虽然AI大幅提升了个人生产力，但从零构建新事物是一件极其孤独的事情。
+• 你需要有人一起头脑风暴、分担痛苦、庆祝胜利，否则很容易在单打独斗中失去动力。
+https://x.com/zarazhangrui/status/2098483800456179923
+
+━━━━━━━━━━
+
+Dan Shipper, CEO at Every
+Every团队抛弃了单纯依赖感觉的vibe checks，建立了基于日常工作的定量个人benchmark平台。
+• 官方benchmark分数很难反映模型在真实工作中的表现，因此团队内部开发了一套定量测试平台。
+• 现在团队成员可以基于自己真实的日常工作流，对新模型进行更严谨、可量化的个人评估。
+https://x.com/danshipper/status/2098481799047647715
+
+━━━━━━━━━━
+
+3. PODCASTS
+
+No Priors: Coinbase&#39;s Everything Exchange: Agentic Finance, Stablecoins, and Tokenization with CEO Brian Armstrong
+Coinbase CEO Brian Armstrong分享了AI agent金融账户的布局，以及他在抗衰老领域的硬核创业。
+• Coinbase正在大力推行Agentic Finance，通过X402协议和stablecoin让AI agent拥有自己的金融账户，解决微支付难题，因为76%的agent交易金额低于30美分。
+• 内部正在打造递归自我改进的软件工厂，让agent在修改代码时吸收团队的历史经验脑库，甚至CEO自己也能用agent并行派发任务并直接提交PR。
+• 他的第二曲线项目New Limit正利用AI和大规模细胞筛选技术进行表观遗传重编程，首批针对酒精性肝病的药物明年将进入一期临床，终极目标是让人类细胞恢复年轻状态。
+&quot;如果我们想给AI提供银行服务，它们也理应拥有自己的金融账户。&quot;
+https://www.youtube.com/watch?v=uLDK4l_-gUE
+
+━━━━━━━━━━
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
