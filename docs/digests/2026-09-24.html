@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest 2026-09-24</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20260924T123720">← Back to archive</a>
+      <a href="../index.html?v=20260924T123720">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest 2026-09-24</h1>
+      <p>Generated 2026-09-24 20:37 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest 2026-09-24
+
+1. X / TWITTER
+
+Swyx (smol_ai / Latent Space)
+把 AINews 的默认模型换成了 5.5 Opus，效果立竿见影。
+• 跑了对比测试，新版 Opus 写的新闻更简洁，那种 AI 味儿的废话少了很多
+• 以后 AINews 就全面用 5.5 Opus 了，确实更有品味
+https://x.com/swyx/status/2102650014552182920
+
+━━━━━━━━━━
+
+Boris Cherny (Claude Code, Anthropic)
+透露了 Claude 在代码形式化验证和性能优化上的硬核细节。
+• Claude 会专门针对代码里容易出 race condition 的复杂状态机建立模型，找反例来修 bug
+• 团队刚发了一篇博客，手把手教工程师怎么把 Claude Code 和桌面端的速度提上来
+https://x.com/bcherny/status/2102898067133595992
+https://x.com/bcherny/status/2102854267782705648
+
+━━━━━━━━━━
+
+Thibault Sottiaux (Codex &amp; ChatGPT, OpenAI)
+预热下周的 DevDay，并展示了 ChatGPT 语音生态的深度整合。
+• 透露下周二 DevDay 会有大量改变工作流的重磅更新，Astra 模型让很多短期内的疯狂想法落地了
+• 分享了自己重度使用 Voice 功能的体验，现在直接用语音管邮件、写代码、排日历，第三方插件也全都支持
+https://x.com/thsottiaux/status/2102996313780736363
+https://x.com/thsottiaux/status/2102814202117411196
+
+━━━━━━━━━━
+
+Peter Yang (AI 教程作者)
+对 Opus 5.5 赞不绝口，并点出了目前模型和 harness 错配的行业现状。
+• 觉得 Opus 5.5 聪明、速度快、写作好，而且对 rate limit 特别友好
+• 吐槽现在一家实验室有最强模型，另一家有最强 harness，呼吁 Claude Code 赶紧补齐 live voice 和 computer use
+https://x.com/petergyang/status/2102946952740741394
+
+━━━━━━━━━━
+
+Madhu Guru (AI Sr Director, Meta)
+反驳了消费者不需要 agent 的观点，点出了 agent 消除特定任务摩擦的巨大价值。
+• 消费者做不同事情的心态完全不一样，逛淘宝是娱乐，但找装修工人纯粹是折磨
+• 技术一直在提供更好的做事方式，能帮用户干掉这些繁琐流程的 consumer agent 潜在需求极大
+https://x.com/realmadhuguru/status/2102777931764498536
+
+━━━━━━━━━━
+
+Thariq (Claude Code, Anthropic)
+拆解了所谓 one-shot 搞定复杂任务背后的超长 prompt 技巧。
+• 揭秘了一个一万字符的 prompt 结构，里面塞满了深度见解、技能定义、示例和 API keys
+• 团队正在尝试这种全新的深度分享形式，直接给你可复制的具体 prompt 和工作流
+https://x.com/trq212/status/2102870353781641416
+
+━━━━━━━━━━
+
+Guillermo Rauch (CEO, Vercel)
+分享了 agent 架构的最新思考，并发布了用于解耦 agent 存储的新产品 Drives。
+• 提出成功的 agent 必须具备 Brain、Hands 和 Files 三个核心组件，在云端拆解运行能大幅优化成本和安全
+• 正式推出 Sandbox 的完美伴侣 Drives，作为 agent 的外部磁盘实现存储解耦，晚上还能跑内存整合的 cron job
+• 顺带分享了用 Opus 5.5 优化 .zshrc 启动时间的极客玩法
+https://x.com/rauchg/status/2102820148629614685
+https://x.com/rauchg/status/2102947745132924993
+
+━━━━━━━━━━
+
+Aaron Levie (CEO, Box)
+探讨了 AI 对创意产业的长期积极影响，并宣布了 Box 与 Muse 的深度整合。
+• 引用观点指出 AI 降低门槛会促使工作室承担更多风险并催生全新叙事形式，就像当年动画和 CGI 的崛起
+• 宣布 Box 正式与 Muse 整合，进一步拓展企业级 AI 创作工作流
+https://x.com/levie/status/2102934874470617303
+https://x.com/levie/status/2102915863989075979
+
+━━━━━━━━━━
+
+Ryo Lu (前 Cursor/Notion 设计师)
+发表长文反思 AI 时代的效率崇拜，呼吁让技术回归人的想象力。
+• 批评当前行业盲目追求速度和自动化，把 AI 变成了制造无用内容的 slop factories
+• 强调真正的危险不是 AI 让人变懒，而是让人陷入无尽的忙碌，失去了深度思考和培养品味的时间
+https://x.com/ryolu_/status/2102933485795369213
+
+━━━━━━━━━━
+
+Garry Tan (President &amp; CEO, Y Combinator)
+指出了 AI 时代初创公司获取客户的两个核心新趋势。
+• 第一个趋势是优化产品体验，让 software agent 主动产生使用你产品的意愿
+• 第二个趋势是利用 agent 作为营销和分发工具，吸引更多人类用户
+https://x.com/garrytan/status/2102955139875397806
+
+━━━━━━━━━━
+
+Peter Steinberger (OpenClaw / OpenAI)
+对 Astra 模型的表现表示赞赏，并看好浏览器在 agent 交互中的潜力。
+• 高度评价 Astra 模型的实际表现，认为其正在大杀四方
+• 认为在 agent 远程交互场景下，现代浏览器已经可以很大程度上替代传统的 VNC 方案
+https://x.com/steipete/status/2103001790069526564
+https://x.com/steipete/status/2102990776439636089
+
+━━━━━━━━━━
+
+Aditya Agarwal (General Partner, SPC)
+分享了关于团队长期稳定性对产出影响的深刻洞察。
+• 指出投资者和员工常犯的错误是只看团队规模，而忽视了团队共事的时间长度
+• 强调在一起工作三年以上的团队，其吞吐量和抗压能力远超刚组建的团队，AUC for teams 才是正确的指标
+https://x.com/adityaag/status/2102782451643040074
+
+━━━━━━━━━━
+
+Claude (Anthropic)
+正式推出 Claude Marketplace，构建完整的 agent 和工具生态系统。
+• 用户现在可以在 Marketplace 中发现并添加 Slack、Notion 等连接器，或购买 Cursor 等公司的 agent 产品
+• 为开发者提供了上架自己工具和服务的渠道，进一步繁荣 Claude 生态
+https://x.com/claudeai/status/2102840851538080172
+
+2. OFFICIAL BLOGS
+
+Anthropic Engineering
+How we contain Claude across products
+Anthropic 工程团队详细拆解了如何在三大核心产品中为 AI agent 设计安全边界。随着 agent 能力增强，单纯依赖人类审批会导致 approval fatigue，因此环境层面的隔离成为关键。文章分享了三种隔离模式：claude.ai 的临时容器、Claude Code 的人类监督沙盒，以及 Claude Cowork 的本地虚拟机。团队还复盘了多个险些导致数据泄露的真实安全漏洞，例如通过合法域名进行数据外发，以及将用户作为 prompt injection 的载体。核心经验是优先在环境层设计硬边界，而非仅依赖模型层的概率性防御。
+https://www.anthropic.com/engineering/how-we-contain-claude
+
+━━━━━━━━━━
+
+An update on recent Claude Code quality reports
+针对用户反馈 Claude Code 变笨和遗忘上下文的问题，Anthropic 公布了详细的 postmortem。问题源于三个独立的失误：为了降低延迟将默认 reasoning effort 降为 medium、一个导致长会话丢失历史 thinking 的 caching bug，以及一条为了减少废话却意外降低代码质量的 system prompt。这些改动在不同时间段影响了不同模型，导致整体体验显得不稳定。团队已回滚所有问题改动，重置了所有订阅用户的 usage limits，并承诺未来对 system prompt 的修改实施更严格的 per-model eval 和灰度发布机制。
+https://www.anthropic.com/engineering/april-23-postmortem
+
+━━━━━━━━━━
+
+Scaling Managed Agents: Decoupling the brain from the hands
+Anthropic 推出了 Managed Agents 托管服务，其核心架构思想是将 agent 的 brain (模型与 harness) 与 hands (执行沙盒) 以及 session 日志彻底解耦。早期的单体容器设计会导致状态丢失和调试困难，解耦后不仅让容器变成了可随时替换的 cattle，还让安全边界更加清晰，确保凭证永远不会进入代码执行环境。这种设计让首 token 延迟 (TTFT) 大幅降低，并支持一个大脑动态调用多个执行环境，为未来更复杂的长周期 agent 任务奠定了底层基础。
+https://www.anthropic.com/engineering/managed-agents
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
