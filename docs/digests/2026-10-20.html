@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest: 2026年10月20日</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20261020T123627">← Back to archive</a>
+      <a href="../index.html?v=20261020T123627">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest: 2026年10月20日</h1>
+      <p>Generated 2026-10-20 20:36 (Asia/Shanghai)</p>
+    </div>
+    
+      <section class="section">
+        <h2>X / TWITTER</h2>
+        
+    <article class="card">
+      <h3>Thariq, Claude Code at Anthropic</h3>
+      <div class="body">与 agent 多任务处理时，慢下来反而更有效。<br>- 大多数人同时跑多个 agent 时，其实很多任务并不重要。<br>- 建议找出你的 P0 核心任务，给予它全部注意力，而不是让 agent 盲目并发。<br><a href="https://x.com/trq212/status/2112219173288120531" target="_blank" rel="noreferrer noopener">https://x.com/trq212/status/2112219173288120531</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Guillermo Rauch, CEO at Vercel</h3>
+      <div class="body">Vercel 开源了一个极快的 HTML artifact builder，让 agent 运行更稳定。<br>- 基于 libfx 构建，解决了 v0 在服务器崩溃、LLM 不稳定和函数限制时的底层管道问题。<br>- 构建速度极快，达到每秒 1000 tokens，且完全免费开源。<br><a href="https://x.com/rauchg/status/2112247046082363821" target="_blank" rel="noreferrer noopener">https://x.com/rauchg/status/2112247046082363821</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Aaron Levie, CEO at Box</h3>
+      <div class="body">随着模型能力增强，应用层 AI 的领域专业化差异反而会增加。<br>- 过去模型能力有限时，产品往往只是简单的 wrapper 或基础 RAG。<br>- 现在 agent 可以处理数小时的长任务、协调 swarm 并使用特定领域数据，这使得在安全、医疗、金融等垂直领域构建专业系统变得更有价值。<br><a href="https://x.com/levie/status/2112404676436222170" target="_blank" rel="noreferrer noopener">https://x.com/levie/status/2112404676436222170</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Nikunj Kothari, Partner at FPV Ventures</h3>
+      <div class="body">Wabi 2.0 展现了 multiplayer agent 和 episodic chat 的优秀范式。<br>- 相比于单线程的 personal agent 或永远存在的 chat，Wabi 采用主 orchestrator 加上特定主题的 episodic chats。<br>- 这些 chat 可以主动生成、按需分享，并在任务结束后自动归档，非常适合旅行或报税等具体场景。<br><a href="https://x.com/nikunj/status/2112219327881761008" target="_blank" rel="noreferrer noopener">https://x.com/nikunj/status/2112219327881761008</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Garry Tan, President and CEO at Y Combinator</h3>
+      <div class="body">Multiplayer agents 以 group chat 的形式存在是必然趋势。<br>- 认为多个 agent 在群组中协同工作是未来的发展方向，并指出 Wabi 已经实现了这一理念。<br><a href="https://x.com/garrytan/status/2112278352514162834" target="_blank" rel="noreferrer noopener">https://x.com/garrytan/status/2112278352514162834</a></div>
+    </article>
+      </section>
+
+      <section class="section">
+        <h2>PODCASTS</h2>
+        
+    <article class="card">
+      <h3>AI &amp; I by Every</h3>
+      <div class="body">Why Every Traded Personal Agents for One Company Agent<br>从人手一个 personal agent 到全公司共享一个 company agent，Every 团队在 AI 工作流上踩过的坑与反思。<br>- 个人 agent 虽然好玩且高度定制，但维护成本极高，非技术人员很难上手，最终往往因为疏于维护而废弃。<br>- 公司级 agent 能够沉淀团队的最佳实践，统一工作流，让所有人共享上下文，避免了重复造轮子和安全配置的内耗。<br>- 未来的终局可能是工作场景使用高度专业化的 company agent，而个人生活则使用完全属于自己的 personal agent。<br>&quot;我们不想让每个人都去投资自己的 agent，而是把所有精力投入到一个让整个公司受益的 agent 中。&quot;<br><a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" target="_blank" rel="noreferrer noopener">https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL</a><br>Generated through the Follow Builders skill: <a href="https://github.com/washi4/follow-builders" target="_blank" rel="noreferrer noopener">https://github.com/washi4/follow-builders</a></div>
+    </article>
+      </section>
+    
+  </div>
+</body>
+</html>
