@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Builders Digest - 2026-11-06</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f7fb; color: #111827; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    .topbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+    .hero { background: #111827; color: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .hero h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; }
+    .hero p { margin: 6px 0 0; color: rgba(255,255,255,.85); }
+    .nav a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; color: #374151; }
+    .card { background: #fff; border-radius: 18px; padding: 16px; margin: 12px 0; box-shadow: 0 6px 24px rgba(17,24,39,.06); border: 1px solid #e5e7eb; }
+    .card h3 { margin: 0 0 10px; font-size: 17px; line-height: 1.3; }
+    .card .body { white-space: pre-wrap; line-height: 1.55; color: #1f2937; }
+    .card a { color: #2563eb; word-break: break-word; }
+    .meta { font-size: 13px; color: #6b7280; }
+    .raw-digest { margin: 12px 0 0; white-space: pre-wrap; line-height: 1.6; color: #1f2937; font-family: inherit; }
+    .archive-list { display: grid; gap: 12px; margin-top: 20px; }
+    .archive-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 14px 16px; box-shadow: 0 6px 24px rgba(17,24,39,.04); }
+    .archive-item a { text-decoration: none; color: #111827; font-weight: 600; }
+    .archive-item .meta { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar nav">
+      <a href="../index.html?v=20261106T145142">← Back to archive</a>
+      <a href="../index.html?v=20261106T145142">Open latest</a>
+    </div>
+    <div class="hero">
+      <h1>AI Builders Digest - 2026-11-06</h1>
+      <p>Generated 2026-11-06 22:51 (Asia/Shanghai)</p>
+    </div>
+    
+    
+      <section class="section">
+        <h2>Digest content</h2>
+        <div class="card">
+          <div class="meta">This digest was generated, but the section parser did not recognize the output format.</div>
+          <pre class="raw-digest">AI Builders Digest - 2026-11-06
+
+1. X / TWITTER
+
+Thibault Sottiaux, Codex &amp; ChatGPT at OpenAI
+OpenAI 工程师认为 AI 将彻底改变软件安全与形式化验证的格局。
+• 对数千万行代码进行 formal proofs 已不再是天方夜谭，在设计新系统时应将其纳入考量。
+• 人类在编写安全基础设施方面表现并不好，未来的终局是为所有人提供 hypersecure 的基础设施和软件，尽管达到这一目标前会经历一些动荡。
+https://x.com/thsottiaux/status/2118569235953893573
+
+━━━━━━━━━━
+
+Thariq, formerly Claude Code at Anthropic
+前 Anthropic 工程师分享了利用 AI agent 提升个人生活效率的实用 prompt 技巧。
+• 推荐使用基于位置的 reminders 来驱动 agent，例如让 agent 记录洗衣服的时间。
+• 如果超过 5 天没洗，agent 会在工作日到家后 30 分钟自动提醒，并持续跟进直到确认或推迟，展现了 agent 在长周期任务中的价值。
+https://x.com/trq212/status/2118399561324699655
+
+━━━━━━━━━━
+
+Amjad Masad, CEO at Replit
+Replit 在 AI 协作编程与底层系统安全方面推出了重要更新。
+• 强调 Replit 是目前市场上唯一的 collaborative AI coding system。
+• 面对频发的 Linux zero-day 漏洞，Replit 通过自定义 Kernel build 成功规避了 96% 的安全风险，并详细分享了全新的 sandbox 设计方案。
+https://x.com/amasad/status/2118503241390665776
+
+━━━━━━━━━━
+
+Guillermo Rauch, CEO at Vercel
+Vercel 正在构建从开发、部署到变现的完整 AI 创作者闭环，并重新定义 agent 的核心应用场景。
+• 勾勒了完美的创作者循环：用 Cursor 构建，部署到 Vercel，在 X 上发布并通过 X Money 变现。
+• 指出 &quot;Doing stuff for you over time&quot; 才是 agent 的 killer app，Vercel Schedules 就像强化版 Cron，支持在 runtime 定义、无限扩展，并能以极低成本按需调用 compute。
+https://x.com/rauchg/status/2118440831355068671
+
+━━━━━━━━━━
+
+Aaron Levie, CEO at Box
+Box 与 NVIDIA 达成合作，旨在解决企业级 AI agent 落地最核心的上下文检索难题。
+• 未来企业中 AI agent 的数量将是人类的 100 倍，而 90% 的企业数据是非结构化的，存在于文档和合同中。
+• 结合 lexical 和 semantic search 提供 advanced context retrieval，确保 agent 能在严格的安全和 governance 策略下，精准获取决策所需的关键信息。
+https://x.com/levie/status/2118498574497665316
+
+━━━━━━━━━━
+
+Garry Tan, President &amp; CEO at Y Combinator
+Y Combinator CEO 呼吁通过反垄断为 AI 初创公司争取生存空间，并看好 AI 在金融领域的突破。
+• 发明 AI 只是一半的工作，必须打破大型科技公司的分发垄断，让成千上万的初创企业参与竞争，才能真正普及 AI 带来的红利。
+• 分享了首个针对 PE/IB 工作的 long horizon benchmark，认为解决 high finance 领域的复杂问题是通往 AGI 的重要路径。
+https://x.com/garrytan/status/2118557763156733984
+
+━━━━━━━━━━
+
+Claude, AI assistant built by Anthropic
+Anthropic 为 Claude 推出了个人财务管理功能，将 AI 的能力延伸至日常账单与收支分析。
+• 用户可安全连接银行账户，Claude 会用日常语言解答财务问题，分析余额和交易记录。
+• 该功能仅为 read-only，不具备转账或投资操作权限，且没有任何广告或赞助推荐，目前正逐步向美国 Pro、Max 和 Ultra 用户开放。
+https://x.com/claudeai/status/2118403114890137895
+
+2. PODCASTS
+
+Unsupervised Learning
+Ep 97: Jev Creator on Decision Models, Benchmark Fatigue &amp; Why the Labs Missed It
+TypeSave CEO 深度探讨了 AI 模型的可靠性、benchmark 的局限性以及未来软件架构的演进方向。
+• 强调 AI 行业过度关注 benchmark 而忽视了实际 utility，开发者需要的是像 SQL 一样稳定、provider agnostic 的可靠性，而不是盲目追求新 shape。
+• 指出当前 coding agent 的设计严重受限于 KV cache 的限制，未来的突破在于摆脱 append-only 的状态管理，实现更灵活的 semantic compaction 和多 agent 共享上下文。
+• 认为大模型在 multimodal 和长文本下的 intelligence 会自然衰减，自动化应该从最简单的文本任务开始，而不是好高骛远。
+人们已经对 benchmark 和那些并不实用的东西产生了极度的疲劳，这比我们想象的要快得多。
+https://www.youtube.com/@RedpointAI
+
+Generated through the Follow Builders skill: https://github.com/washi4/follow-builders</pre>
+        </div>
+      </section>
+  </div>
+</body>
+</html>
